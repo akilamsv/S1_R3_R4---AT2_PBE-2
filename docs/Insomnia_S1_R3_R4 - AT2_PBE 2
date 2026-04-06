@@ -1,0 +1,299 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: S1_R3_R4
+meta:
+  id: wrk_339f7ad1d5df419cb9c7aa1f4773f791
+  created: 1774888193961
+  modified: 1774888193961
+  description: ""
+collection:
+  - name: Categorias
+    meta:
+      id: fld_3086c42db2fb4530a042d90cba8f690f
+      created: 1774893246370
+      modified: 1774896797724
+      sortKey: -1774893246370
+      description: ""
+    children:
+      - url: localhost:8080/categorias
+        name: Criar Categorias
+        meta:
+          id: req_4a324476870048868188bf6943e0c3ea
+          created: 1774888240029
+          modified: 1774896811081
+          isPrivate: false
+          description: ""
+          sortKey: -1774896801881
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Maquiagem",
+              "descricao": "Produtos"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/categorias
+        name: Selecionar Categorias
+        meta:
+          id: req_691744838442425b9646f0f007ec1d19
+          created: 1774891842942
+          modified: 1774896802003
+          isPrivate: false
+          description: ""
+          sortKey: -1774896801981
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/categorias
+        name: Atualizar Categorias
+        meta:
+          id: req_ec33b1d28b954f1bbe828b1bf7b9e6ee
+          created: 1774892241734
+          modified: 1774896812572
+          isPrivate: false
+          description: ""
+          sortKey: -1774896801781
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Eletrônicos",
+              "descricao": "Produtos tecnológicos"
+            }
+        parameters:
+          - name: id
+            value: "1"
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/categorias/2
+        name: Deletar Categorias
+        meta:
+          id: req_e9a8620648744d6f9ceda987644789a8
+          created: 1774892977215
+          modified: 1774896813942
+          isPrivate: false
+          description: ""
+          sortKey: -1774896801681
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Produtos
+    meta:
+      id: fld_49f1c75530884d7d92e7392e5d57f916
+      created: 1774896787555
+      modified: 1774896819105
+      sortKey: -1774893240349
+      description: ""
+    children:
+      - url: localhost:8080/produtos
+        name: Criar Produtos
+        meta:
+          id: req_128702411aea41e5bab072dfc93527e3
+          created: 1774893238342
+          modified: 1775157289458
+          isPrivate: false
+          description: ""
+          sortKey: -1774896820046
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: idCategoria
+              value: "3"
+              multiline: false
+              type: text
+            - name: nomeProduto
+              value: Maquiagem
+              description: ""
+              disabled: false
+            - name: valorProduto
+              value: "13"
+              description: ""
+              disabled: false
+              multiline: false
+              type: text
+            - name: image
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\43083788851\Downloads\maquiagematv.jpg
+              type: file
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: true
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/produtos
+        name: Selecionar Produtos
+        meta:
+          id: req_f996dd5bf5d44738a62628913211007a
+          created: 1774896846866
+          modified: 1775150909579
+          isPrivate: false
+          description: ""
+          sortKey: -1774896820146
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/produtos
+        name: Atualizar Produtos
+        meta:
+          id: req_4e4d8348858c4767a437d62ce5f5678b
+          created: 1774896859509
+          modified: 1775473945177
+          isPrivate: false
+          description: ""
+          sortKey: -1774896819946
+        method: PUT
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: idCategoria
+              value: "3"
+              description: ""
+              disabled: false
+            - name: nomeProduto
+              value: Paleta
+              description: ""
+              disabled: false
+            - name: valorProduto
+              value: "10"
+              description: ""
+              disabled: false
+            - name: image
+              value: ""
+              description: ""
+              disabled: false
+              multiline: true
+              fileName: C:\Users\43083788851\Downloads\paleta.jpg
+              type: file
+        parameters:
+          - name: idProduto
+            value: "3"
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/produtos/6
+        name: Deletar Produtos
+        meta:
+          id: req_1cf7480aab904b068cdf92bf61d56cb0
+          created: 1774896887382
+          modified: 1775474003574
+          isPrivate: false
+          description: ""
+          sortKey: -1774896819846
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_5602f4522e20ad41b6059b2cdccba1ef9c1b3099
+    created: 1774888194005
+    modified: 1774888194005
+environments:
+  name: Base Environment
+  meta:
+    id: env_5602f4522e20ad41b6059b2cdccba1ef9c1b3099
+    created: 1774888193996
+    modified: 1774888193996
+    isPrivate: false
